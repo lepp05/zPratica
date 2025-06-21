@@ -5,14 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
         body{
 
         }
         header{
             text-align: center;
+            background-color: #2F4858;
+            color: #86BBD8;
 
         }
-        header nav {
+        header nav{
+            margin-top: 30px;
+            
+            padding: 10px;
+        }
+        header nav a{
+            color: #86BBD8;
+            text-decoration: none;
+            padding: 8px;
+            background-color: #2F4858;  
+            border-radius: 10px 0 10px 0; 
+        }
+        nav a:hover{
+            background-color: #86BBD8;
+            color: #2F4858;
+            transition: transform 0.5s ease, background-color 0.5s ease;
 
         }
         main{
@@ -39,11 +60,15 @@
             <a href="#">Help</a>
         </nav>
     </header>
+    <div>
+        ''
+    </div>
     <main>
         <h2>Playlist Lepp</h2>
         <div class="msc"></div>
         <div class="msc"></div>
         <div class="msc"></div>
+       
     </main>
 </body>
 </html>
