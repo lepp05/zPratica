@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+ 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lepp</title>
+<style>
+body {
+    background-color: rgb(38, 226, 110);
+color: rgb(33, 1, 218);
+font: 15pt italic;
+}
+
+</style>
+
+</head>
+<body>
+<h1>Teste </h1>
+
+    <script>
+var nome = prompt('Qual seu nome?')
+var idade = Number(prompt('Por segurança, digite sua idade!'))
+
+if(idade >= 18) {
+alert('Ok, pode continuar!');}
+else {
+alert(`${nome}, vc não tem idade suficiente para acessar o conteudo!`);
+    window.location.href = 'https://google.com';
+}
+document.write(`Oi ${nome}, o que deseja por aqui?`)
+
+ </script>
+
+
+
+
+
+
+</body>
+<br>
+<p>opcao 1 - 
+    <input type="checkbox"
+    id="massa10"> <br>
+    <p>opcao 2 -
+    <input type="checkbox"
+    id="massa30"> <br><br>
+
+
+<button type="submit">Enviar</button>
+
+
+
+</p>
+<script>
+
+document.getElementById('massa10').addEventListener("change", function() {
+if (this.checked) { alert(`Boa escolha ${nome}, continue para finalizar!`);
+}});
+
+document.getElementById('massa30').addEventListener("change", function() {
+if (this.checked) { alert(`Boa escolha ${nome}, continue para finalizar!`);
+}});
+
+document.getElementById("fileImput")
+
+
+</script>
+
+
+
+
+</html>
