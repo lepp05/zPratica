@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lepp playlist</title>
     <style>
         * {
             margin: 0;
             padding: 0;
         }
         body{
-
+            font-family: Arial, Helvetica, sans-serif;
         }
         header{
             text-align: center;
@@ -29,6 +29,7 @@
             padding: 8px;
             background-color: #2F4858;  
             border-radius: 10px 0 10px 0; 
+            font-weight: bolder;
         }
         nav a:hover{
             background-color: #86BBD8;
@@ -38,17 +39,51 @@
         }
         main{
             background-color: #9EE493;
-            justify-items: center;
+            justify-items: center; 
+            padding: 20px;
             
+            
+        }
+        
+        main h2 {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #2F4858;
         }
        
         div.msc{
             display: inline-block;
             background-color: #336699;
-            height: 100px;
-            width: 100px;
-            border: 1px solid white;
+            height: 300px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
         }
+        div.msc:hover{
+            transform: translate(0px, -15px);
+            transition: transform 0.7s ease;
+        }
+        div p{
+            color: #1b2931;
+            font-weight: bolder;
+            background-color: #86BBD8;
+            border-radius: 10px 10px 0 0;
+        }
+        div#q1{
+            background-image: url(https://i.pinimg.com/736x/95/9a/02/959a0293e34ffbf31b3814a1b3d9e442.jpg);
+            background-position: 63% 10%;
+        }
+        div#q2{
+            background-image: url(https://i.pinimg.com/736x/91/62/d9/9162d90169ee73e8454d3c8967f6c0d3.jpg);
+            background-position: 80% 75%;
+        }
+        div#q3{
+            background-image: url(https://i.pinimg.com/736x/b0/e2/8b/b0e28ba522907619dbe183a5afa5eecd.jpg);
+            background-position: 50% 30%;
+        }
+        
+
     </style>
 </head>
 <body>
@@ -61,13 +96,19 @@
         </nav>
     </header>
     <div>
-        ''
+        
     </div>
     <main>
-        <h2>Playlist Lepp</h2>
-        <div class="msc"></div>
-        <div class="msc"></div>
-        <div class="msc"></div>
+        <h2>List Animes</h2>
+        <div class="msc" id="q1">
+            <p>One Piece</p>
+        </div>
+        <div class="msc" id="q2">
+            <p>Jujutsu Kaisen</p>
+        </div>
+        <div class="msc" id="q3">
+            <p>Tokio Ghoul</p>
+        </div>
        
     </main>
 </body>
