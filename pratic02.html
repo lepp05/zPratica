@@ -51,20 +51,9 @@
             color: #2F4858;
         }
        
-        div.msc{
-            display: inline-block;
-            background-color: #336699;
-            height: 300px;
-            width: 200px;
-            border: 2px solid black;
-            border-radius: 10px;
-            text-align: center;
-        }
-        div.msc:hover{
-            transform: translate(0px, -15px);
-            transition: transform 0.7s ease;
-        }
-        div p{
+        
+        
+        .title{
             color: #1b2931;
             font-weight: bolder;
             background-color: #86BBD8;
@@ -82,6 +71,50 @@
             background-image: url(https://i.pinimg.com/736x/b0/e2/8b/b0e28ba522907619dbe183a5afa5eecd.jpg);
             background-position: 50% 30%;
         }
+        .list{
+            display: flex;
+            gap: 10px;
+        }
+        div.msc{
+            background-color: #336699;
+            height: 300px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 10px;
+            text-align: center;
+
+            /* efeito blur */
+            position: relative;
+            overflow: hidden;
+            transition: 1s;
+
+        }
+        .descrition{
+            text-align: left;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: 1s;
+            background-color: none;
+
+        }
+        .msc:hover{
+            
+            transform: translate(0px, -15px);
+            transition: transform 0.7s ease;
+        }
+        .msc:hover .descrition{
+            opacity: 1;
+            top: 50%;
+            color: red;
+            font-weight: bolder;
+        }
+        .list:hover .msc:not(:hover){
+            filter: blur(5px);
+        }
+        
         
 
     </style>
@@ -100,14 +133,20 @@
     </div>
     <main>
         <h2>List Animes</h2>
-        <div class="msc" id="q1">
-            <p>One Piece</p>
-        </div>
-        <div class="msc" id="q2">
-            <p>Jujutsu Kaisen</p>
-        </div>
-        <div class="msc" id="q3">
-            <p>Tokio Ghoul</p>
+        <div class="list">
+            
+            <div class="msc" id="q1">
+                <p class="title">One Piece</p>
+                <p class="descrition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quas reprehenderit deleniti? , esse at perspiciatis ab nam aut quod. Voluptas, doloribus veritatis?</p>
+            </div>
+            <div class="msc" id="q2">
+                <p class="title">Jujutsu Kaisen</p>
+                <p class="descrition">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae nihil cupiditate facere, error, velit nostrum neque, asperiores ullam alias incidunt adipisci. Nisi accusamus obcaecati sapiente quas aliquid exercitationem, officiis dolore.</p>
+            </div>
+            <div class="msc" id="q3">
+                <p class="title">Tokio Ghoul</p>
+                <p class="descrition">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, et doloribus ipsa repellendus molestiae nisi soluta error enim, atque commodi magnam aut vitae itaque quia distinctio cupiditate dicta, ratione beatae.</p>
+            </div>
         </div>
        
     </main>
