@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito blur</title>
+</head>
+<style>
+    main{
+        text-align: center;
+    }
+    .list{
+        display: flex;
+        gap: 10px;
+    }
+    .item{
+        height: 400px;
+        width: 300px;
+        background-image: url(https://i.pinimg.com/736x/26/66/7c/26667c4c6c9a2b5160011c6a4a10d0d6.jpg);
+        background-position: 50% 50%;
+        border-radius: 10px;
+
+        /* começa aqui */
+        position: relative;
+        overflow: hidden;
+        transition: 1s;
+
+    }
+    p{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: 1s;
+    }
+    .item:hover{
+        transform: scale(1.05);
+    }
+    .item:hover p{
+        opacity: 1;
+        top: 50%;
+        color: white;
+    }
+    .list:hover .item:not(:hover){
+        filter: blur(5px);
+    }
+</style>
+<body>
+    <main>
+        <h1>Testando efeito</h1>
+        <div class="list">
+            <div class="item">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quia tenetur debitis harum molestiae molestias dolor. Accusantium id inventore perferendis a eos necessitatibus explicabo corporis possimus est totam. Quisquam, id!</p>
+            </div>
+            <div class="item">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, optio! Mollitia quisquam, laborum optio iusto neque ex perspiciatis dolorem sit accusamus, voluptatibus aut repellendus, veritatis recusandae porro ad dolor! Enim.</p>
+            </div>
+            <div class="item">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex porro quos alias esse doloribus quasi id exercitationem quia sint veniam voluptatem, nihil eius perspiciatis, repellat natus? Alias amet accusantium quis?</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
